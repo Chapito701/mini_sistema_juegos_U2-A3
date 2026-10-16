@@ -1,0 +1,29 @@
+{% extends "maestra.html" %}
+{% block titulo %} Registrarse {% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <h3 class="is-size-3">Registro de Usuario</h3>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <div class="field">
+                    <label class="label">{{ form.username.label }}</label>
+                    <div class="control">
+                        {{ form.username(class="input", placeholder="Elige un usuario") }}
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">{{ form.password.label }}</label>
+                    <div class="control">
+                        {{ form.password(class="input", placeholder="Elige una contraseña") }}
+                    </div>
+                </div>
+                <div class="control">
+                    {{ form.submit(class="button is-info") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

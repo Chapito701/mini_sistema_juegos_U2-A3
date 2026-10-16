@@ -1,0 +1,29 @@
+{% extends "maestra.html" %}
+{% block titulo %} Iniciar Sesión {% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <h3 class="is-size-3">Iniciar Sesión</h3>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <div class="field">
+                    <label class="label">{{ form.username.label }}</label>
+                    <div class="control">
+                        {{ form.username(class="input", placeholder="Tu usuario") }}
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">{{ form.password.label }}</label>
+                    <div class="control">
+                        {{ form.password(class="input", placeholder="Tu contraseña") }}
+                    </div>
+                </div>
+                <div class="control">
+                    {{ form.submit(class="button is-primary") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
